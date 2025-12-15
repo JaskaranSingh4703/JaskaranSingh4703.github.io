@@ -2,26 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QR Image</title>
 <style>
   html, body {
     margin: 0;
     padding: 0;
+    background-color: black;
+    text-align: center;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* align to top so it starts visible */
     min-height: 100vh;
-    background: black;
   }
 
   img {
-    display: block;
-    width: 100%;
     max-width: 100%;
-    height: auto; /* maintain aspect ratio */
+    max-height: 100vh; /* ensures image fits in visible viewport */
+    object-fit: contain; /* preserves aspect ratio */
+    margin-top: 0;
   }
 </style>
 </head>
 <body>
-  <img src="image.jpg" alt="QR Image">
+  <img src="SASHA-CHRISTMAS-tag.jpg" alt="QR Image">
 </body>
 </html>
+
 
