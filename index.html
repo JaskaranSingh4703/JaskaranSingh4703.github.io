@@ -4,61 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>QR Image</title>
+
 <style>
-  /* Full-page black background */
   html, body {
     margin: 0;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    background-color: black;
+    background: black;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
 
-  /* Container for image */
   .container {
     display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: flex-start;   /* align to top to minimize top black space */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    padding: 0;
-    box-sizing: border-box;
   }
 
-  /* Video styling */
-  video {
+  img {
     max-width: 100%;
     max-height: calc(100vh - env(safe-area-inset-top));
     width: auto;
     height: auto;
     object-fit: contain;
     display: block;
-    background: black;
   }
 </style>
 </head>
 
 <body>
   <div class="container">
-    <video
-      src="SASHA-CHRISTMAS-tag.mp4"
-      poster="SASHA-CHRISTMAS-tag.jpg"
-      autoplay
-      loop
-      muted
-      playsinline
-      preload="auto"
-    ></video>
+    <img src="SASHA-CHRISTMAS-tag.gif" alt="QR animation">
   </div>
-
-  <!-- 🔽 ADD THIS RIGHT HERE -->
-  <script>
-    const video = document.querySelector('video');
-    if (video) {
-      video.muted = true;
-      video.setAttribute('playsinline', '');
-      video.play().catch(() => {});
-    }
-  </script>
 </body>
 </html>
