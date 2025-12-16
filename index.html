@@ -21,33 +21,44 @@
     justify-content: center;   /* horizontal center */
     align-items: flex-start;   /* align to top to minimize top black space */
     min-height: 100vh;
-    padding: 0;                /* remove extra padding */
+    padding: 0;
     box-sizing: border-box;
   }
 
-  /* Image styling */
+  /* Video styling */
   video {
-  max-width: 100%;
-  max-height: calc(100vh - env(safe-area-inset-top));
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  background: black;
-}
+    max-width: 100%;
+    max-height: calc(100vh - env(safe-area-inset-top));
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    background: black;
+  }
 </style>
 </head>
+
 <body>
   <div class="container">
     <video
-  src="SASHA-CHRISTMAS-tag.mp4"
-  poster="SASHA-CHRISTMAS-tag.jpg"
-  autoplay
-  loop
-  muted
-  playsinline
-  preload="auto"
-></video>
+      src="SASHA-CHRISTMAS-tag.mp4"
+      poster="SASHA-CHRISTMAS-tag.jpg"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+    ></video>
   </div>
+
+  <!-- 🔽 ADD THIS RIGHT HERE -->
+  <script>
+    const video = document.querySelector('video');
+    if (video) {
+      video.muted = true;
+      video.setAttribute('playsinline', '');
+      video.play().catch(() => {});
+    }
+  </script>
 </body>
 </html>
