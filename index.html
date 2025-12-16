@@ -26,19 +26,26 @@
   }
 
   /* Image styling */
-  img {
-    max-width: 100%;
-    max-height: calc(100vh - env(safe-area-inset-top)); /* fits viewport minus top inset */
-    width: auto;
-    height: auto;
-    object-fit: contain;       /* preserves aspect ratio */
-    display: block;
-  }
+  video {
+  max-width: 100%;
+  max-height: calc(100vh - env(safe-area-inset-top));
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: black;
+}
 </style>
 </head>
 <body>
   <div class="container">
-    <img src="SASHA-CHRISTMAS-tag.jpg" alt="QR Image">
+    <video
+  src="SASHA-CHRISTMAS-tag.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+></video>
   </div>
 </body>
 </html>
